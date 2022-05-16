@@ -1,0 +1,118 @@
+{
+  "HTMLElem": {
+    "//": "バーコードエリアID指定",
+    "barcodeAreaId": "barcode-reader",
+
+    "//": "人事APIデータ取得後のレスポンスメッセージID指定",
+    "resultMsgId": "result-message",
+
+    "//": "人事APIデータ取得後のレスポンスメッセージ内容",
+    "resultMsg": "さん、下記ボタンを選択してください",
+
+    "//": "エラーメッセージID指定",
+    "errorMsgId": "error-message",
+
+    "//": "レスポンスID指定",
+    "responseData": "response-data"
+  },
+  "inputStream": {
+    "//": "スキャン方式(default:LiveStream)",
+    "type": "LiveStream",
+
+    "//": "カメラ映像を表示するHTML要素ID指定",
+    "target": "barcord-scan-area",
+
+    "decodeBarCodeRate": 5,
+
+    "//": "検出が成功したときの遅延時間",
+    "successTimeout": 500,
+
+    "//": "コードの繰り返しを受け入れ可否",
+    "codeRepetition": true,
+
+    "//": "垂直のバーコードの読み取り",
+    "tryVertical": true,
+
+    "//": "フレームレート",
+    "frameRate": 30,
+    
+    "//": "横幅",
+    "width": 640,
+
+    "//": "縦幅",
+    "height": 480,
+
+    "//": "バックカメラの利用を設定(フロントカメラは user )",
+    "facingMode": "environment",
+
+    "//": "スキャン精度 1秒あたりの最大スキャン回数",
+    "frequency": 10,
+    
+    "//": "スキャンしない範囲",
+    "area": {
+      "top": "0%",
+      "right": "0%",
+      "left": "0%",
+      "bottom": "0%" 
+    }
+  },
+  
+  "//": "読み取り設定",
+  "decoder":{
+    "//": "バーコード方式(code_128_reader（デフォルト) ean_reader,ean_8_reader,code_39_reader,code_39_vin_reader,codabar_reader,upc_reader,upc_e_reader,i2of5_reader,2of5_reader,code_93_reader,code_32_reader)",
+    "readers": "code_128_reader",
+
+    "//": "複数検知 (精度向上のため無効)",
+    "multiple": false
+  },
+    "//": "バーコードの位置を特定する機能",
+    "locate": true,
+    "locator": {
+      "//": "バーコードの位置を特定する機能",
+      "halfSample": true,
+
+      "//": "バーコード読み取りサイズ(x-small,small,medium,large,x-large)",
+      "patchSize": "small"
+    },
+    "debug": false,
+
+    "//": "スキャンしたコードのチェック回数",
+    "codeCheckCount": 3,
+
+    "//": "バーコード検知の枠の色",
+    "scanBoxLineColor": "green",
+
+    "//": "バーコード検知の枠の幅",
+    "scanBoxLineWidth": 2,
+
+    "//": "バーコード読取り時の枠の色",
+    "successBoxLineColor": "yellow",
+
+    "//": "バーコード読取り時の枠の幅",
+    "successBoxLineWidth": 2,
+
+    "//": "バーコード検出完了時の色",
+    "successLineColor": "red",
+
+    "//": "バーコード検出完了時の幅",
+    "successLineWidth": 5,
+
+    "//": "検出完了時の音声path",
+    "entryAudioSource": "./medias/scan_entry_succes.mp3",
+    "exitAudioSource": "./medias/scan_entry_succes.mp3",
+    "errorAudioSource": "./medias/scan_error.mp3",
+    
+    "//": "自動停止時間(秒設定)",
+    "scanTimeOut": 300,
+
+  "API" : {
+    "//": "人事データベースAPI URL",
+    "humanResource":{
+      "url" : "http://127.0.0.1:8000/api/resource/barcode/"
+    },
+    "//": "登録データベースAPI URL",
+    "record":{
+      "url" : "http://127.0.0.1:8000/api/record/"
+    }
+  }
+}
