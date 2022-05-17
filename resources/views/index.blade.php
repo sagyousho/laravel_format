@@ -12,9 +12,15 @@
 <body>
 
   <div id="app">
-    <example-component></example-component>
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
-    <button class="btn btn-primary">test</button>
+  </div>
+  <button class="btn btn-primary">test</button>
+  <script src=""></script>
   <script defer src="{{ asset('dist/js/init.js') }}"></script>
 </body>
 

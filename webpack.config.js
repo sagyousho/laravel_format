@@ -116,6 +116,12 @@ const app = {
           test: /\.vue$/,
           loader: 'vue-loader',
       },
+      {
+        // 拡張子 .ts の場合
+        test: /\.ts$/,
+        // TypeScript をコンパイルする
+        use: 'ts-loader',
+      },
     ]
   },
   target: "web",
