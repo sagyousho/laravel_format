@@ -11329,5 +11329,20 @@ textarea.form-control-lg {
   !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[3]!./src/scss/style.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
 
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/views/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+#barcord-scan-area canvas,
+video {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: 240px;
+}
+.drawingBuffer {
+  position: absolute;
+  top: 160;
+  left: 0;
+}
 
 /*# sourceMappingURL=style.css.map*/

@@ -4,6 +4,12 @@
     "barcodeAreaId": "barcode-reader",
 
     "//": "人事APIデータ取得後のレスポンスメッセージID指定",
+    "codeElemId": "code",
+
+    "//": "人事APIデータ取得後のレスポンスメッセージID指定",
+    "nameElemId": "name",
+
+    "//": "人事APIデータ取得後のレスポンスメッセージID指定",
     "resultMsgId": "result-message",
 
     "//": "人事APIデータ取得後のレスポンスメッセージ内容",
@@ -37,10 +43,10 @@
     "frameRate": 30,
     
     "//": "横幅",
-    "width": 640,
+    "width": 1280,
 
     "//": "縦幅",
-    "height": 480,
+    "height": 960,
 
     "//": "バックカメラの利用を設定(フロントカメラは user )",
     "facingMode": "environment",
@@ -103,12 +109,12 @@
     "errorAudioSource": "./medias/scan_error.mp3",
     
     "//": "自動停止時間(秒設定)",
-    "scanTimeOut": 300,
+    "scanTimeOut": 30,
 
   "API" : {
     "//": "人事データベースAPI URL",
     "humanResource":{
-      "url" : "http://127.0.0.1:8000/api/resource/barcode/"
+      "url" : "http://127.0.0.1:8000/api/barcode/"
     },
     "//": "登録データベースAPI URL",
     "record":{

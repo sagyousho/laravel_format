@@ -7,15 +7,57 @@ import Vue from "vue";
 // import App from "../App.vue";
 import router from '../js/router';
 import VueRouter from 'vue-router';
+
 window.Vue = Vue;
 Vue.use(VueRouter);
-
 // alert('Test');
-
-new Vue({
+new Vue(
+  {
     el: '#app',
-    router
-})
+    router,
+    data: {
+      code: "",
+      name: "",
+      clear: ""
+    },
+
+    created() {
+      this.clear = setInterval(this.getValue, 1000);
+    },
+    methods: {
+      getValue: function () {
+        this.code = document.getElementById('code').value;
+        this.name = document.getElementById('name').value;
+        if (this.code) {
+          console.log(this.code);
+          clearInterval(this.clear);
+          // this.$router.push('select');
+          this.$router.push({
+            name: 'select',
+            params: {
+              code: this.code,
+              name: this.name
+            }
+          });
+        }
+      },
+    },
+    // watch: {
+    //   code(newVal, oldVal) {
+    //       console.log("newVal:" + newVal);
+    //       console.log("oldVal:" + oldVal);
+    //   },
+    //   name(newVal, oldVal) {
+    //       console.log("newVal:" + newVal);
+    //       console.log("oldVal:" + oldVal);
+    //   },
+    // },
+  }
+);
+
+
+
+
 // import Vue from "vue";
 // require('./bootstrap');
 // window.Vue = require('vue');
